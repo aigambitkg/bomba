@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix Bomba - Premium Mobile Recovery Frankfurt</title>
+    
+    <!-- Google Fonts for sleek typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#ccff00', // Neon Green/Yellow accent
+                        dark: '#050505',
+                        darker: '#0a0a0a',
+                        card: '#111111'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Background Animations */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob {
+            animation: blob 10s infinite alternate ease-in-out;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        /* Scroll Animations (Intersection Observer targets) */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+        }
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Global Selection Color */
+        ::selection {
+            background-color: #ccff00;
+            color: #000;
+        }
+    </style>
+</head>
+<body class="bg-dark text-white font-sans overflow-x-hidden min-h-screen">
+
+    <!-- BACKGROUND GLOW EFFECTS -->
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-primary rounded-full mix-blend-multiply filter blur-[150px] opacity-10 animate-blob"></div>
+        <div class="absolute top-[40%] right-[-10%] w-96 h-96 bg-primary rounded-full mix-blend-multiply filter blur-[120px] opacity-10 animate-blob animation-delay-2000"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 top-0 bg-dark/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-black tracking-tighter uppercase">Felix Bomba<span class="text-primary">.</span></span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button id="langToggleBtn" class="flex items-center gap-1 text-sm font-medium text-gray-400 hover:text-white transition-colors">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                    <span id="langToggleText">EN</span>
+                </button>
+                <button class="wa-btn hidden sm:flex items-center gap-2 bg-primary text-black px-5 py-2.5 rounded-full font-bold text-sm hover:scale-105 transition-transform shadow-[0_0_20px_rgba(204,255,0,0.3)]">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span id="navBookText">Via WhatsApp buchen</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 pt-32 pb-24 px-4 sm:px-6 max-w-5xl mx-auto">
+        
+        <!-- HERO SECTION -->
+        <section class="flex flex-col items-start min-h-[70vh] justify-center relative">
+            <div class="fade-in-up" style="transition-delay: 0ms">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-semibold tracking-wider text-gray-300 mb-6 backdrop-blur-sm">
+                    <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                    <span id="heroBadge">MOBILE SERVICE VERFÜGBAR</span>
+                </div>
+            </div>
+
+            <div class="fade-in-up" style="transition-delay: 100ms">
+                <h1 class="text-5xl sm:text-7xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase mb-6">
+                    <span id="heroTitle1">OPTIIMERE DEINE</span> <br />
+                    <span class="text-primary" id="heroTitle2">PERFORMANCE</span>
+                </h1>
+            </div>
+
+            <div class="fade-in-up" style="transition-delay: 200ms">
+                <p id="heroSub" class="text-lg sm:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
+                    Premium Mobile Sports Massage & Recovery als zentrale Anlaufstelle im Herzen von Frankfurt am Main, Hessen. Ich komme direkt zu dir nach Hause, ins Gym oder ins Büro. Für High-Performer, viel beschäftigte Profis und Athleten.
+                </p>
+            </div>
+
+            <div class="fade-in-up" style="transition-delay: 300ms w-full sm:w-auto">
+                <button class="wa-btn group relative flex items-center justify-center gap-3 bg-primary text-black px-8 py-4 rounded-xl font-bold text-lg sm:text-xl w-full sm:w-auto overflow-hidden transition-transform hover:scale-[1.02]">
+                    <span class="relative z-10" id="heroCTA">Jetzt Termin anfragen</span>
+                    <i data-lucide="chevron-right" class="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform"></i>
+                    <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity z-0"></div>
+                </button>
+            </div>
+
+            <!-- Quick Value Props -->
+            <div id="featuresGrid" class="grid grid-cols-3 gap-4 sm:gap-8 mt-16 w-full border-t border-white/10 pt-8">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- IMAGE BREAK -->
+        <div class="fade-in-up" style="transition-delay: 100ms">
+            <div class="w-full h-64 sm:h-96 rounded-3xl overflow-hidden relative my-20 group bg-card">
+                <img 
+                    src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop" 
+                    alt="Sports Massage Therapy Frankfurt" 
+                    class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700 group-hover:scale-105 transform"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+            </div>
+        </div>
+
+        <!-- METHODS / STATIONEN -->
+        <section class="py-10" id="methods">
+            <div class="fade-in-up text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-black tracking-tight uppercase mb-4">
+                    <span id="methodsTitle1">UNSERE</span> <br/>
+                    <span class="text-primary" id="methodsTitle2">STATIONEN</span>
+                </h2>
+                <p id="methodsSub" class="text-gray-400 max-w-2xl mx-auto">
+                    Ein ganzheitlicher Ansatz, der individuell auf deinen Körper abgestimmt wird. So sieht dein Recovery-Prozess aus:
+                </p>
+            </div>
+
+            <div id="methodsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- SERVICES / PACKAGES -->
+        <section class="py-16 mt-10 border-t border-white/5" id="services">
+            <div class="fade-in-up text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-black tracking-tight uppercase mb-4">
+                    <span id="servicesTitle">INVESTMENT IN</span> <br/>
+                    <span class="text-primary" id="servicesTitleHighlight">RECOVERY</span>
+                </h2>
+                <p id="servicesSub" class="text-gray-400 max-w-xl mx-auto">
+                    Maßgeschneiderte Behandlungen in ganz Hessen für alle, die das Maximum aus ihrem Körper herausholen wollen.
+                </p>
+            </div>
+
+            <div id="packagesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Populated by JS -->
+            </div>
+
+            <!-- POLICIES BOX -->
+            <div class="fade-in-up mt-16 max-w-3xl mx-auto bg-primary/5 border border-primary/20 rounded-2xl p-6 sm:p-8">
+                <h3 class="text-primary font-bold text-lg mb-4 flex items-center gap-2">
+                    <i data-lucide="info" class="w-5 h-5"></i>
+                    <span id="policiesTitle">Wichtige Buchungshinweise</span>
+                </h3>
+                <div class="space-y-4 text-sm sm:text-base text-gray-300">
+                    <p class="flex items-start gap-3">
+                        <i data-lucide="clock-4" class="w-5 h-5 shrink-0 text-primary mt-0.5"></i>
+                        <span id="policyExpress"><strong>Schnell-Service:</strong> Bei kurzfristigen Anfragen (für Behandlungen innerhalb der nächsten 2 Stunden) ist die Bezahlung im Voraus zu leisten.</span>
+                    </p>
+                    <p class="flex items-start gap-3">
+                        <i data-lucide="alert-triangle" class="w-5 h-5 shrink-0 text-primary mt-0.5"></i>
+                        <span id="policyCancel"><strong>Stornierungen:</strong> Termine müssen 24 Stunden im Voraus abgesagt werden. Andernfalls wird eine Ausfallgebühr von 15% erhoben.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 bg-darker py-8 text-center mt-20">
+        <div class="flex justify-center items-center gap-2 text-gray-500 text-sm mb-4">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span id="footerText">Zentrale Anlaufstelle: Frankfurt am Main, Hessen (+20km Radius inklusive)</span>
+        </div>
+        <div class="text-2xl font-black tracking-tighter text-gray-700 uppercase">
+            Felix Bomba<span class="text-primary">.</span>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <button class="wa-btn fixed bottom-6 right-6 z-50 bg-primary text-black p-4 rounded-full shadow-[0_0_20px_rgba(204,255,0,0.4)] hover:scale-110 transition-transform flex items-center justify-center animate-bounce" style="animation-duration: 3s;" aria-label="Contact on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="w-8 h-8">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-5.824 4.74-10.563 10.564-10.563 5.826 0 10.564 4.741 10.564 10.564 0 5.822-4.74 10.561-10.564 10.561z"/>
+        </svg>
+    </button>
+
+    <!-- MAIN JAVASCRIPT LOGIC -->
+    <script>
+        // --- TRANSLATIONS DATA ---
+        const content = {
+            de: {
+                navBook: "Via WhatsApp buchen",
+                heroBadge: "MOBILE SERVICE VERFÜGBAR",
+                heroTitle1: "OPTIIMERE DEINE",
+                heroTitle2: "PERFORMANCE",
+                heroSub: "Premium Mobile Sports Massage & Recovery als zentrale Anlaufstelle im Herzen von Frankfurt am Main, Hessen. Ich komme direkt zu dir nach Hause, ins Gym oder ins Büro. Für High-Performer, viel beschäftigte Profis und Athleten.",
+                heroCTA: "Jetzt Termin anfragen",
+                targetAudience: [
+                    { iconName: "activity", title: "Recovery", desc: "Heilung beschleunigen" },
+                    { iconName: "zap", title: "Mobility", desc: "Bewegungsradius erweitern" },
+                    { iconName: "map-pin", title: "Mobile", desc: "Direkt bei dir vor Ort" }
+                ],
+                methodsTitle1: "UNSERE",
+                methodsTitle2: "STATIONEN",
+                methodsSub: "Ein ganzheitlicher Ansatz, der individuell auf deinen Körper abgestimmt wird. So sieht dein Recovery-Prozess aus:",
+                methods: [
+                    { iconName: "scan-line", title: "1. Assessment", desc: "Initiale Analyse deiner Bewegungsabläufe und Haltung zur Lokalisierung von Dysbalancen." },
+                    { iconName: "hand", title: "2. Deep Tissue", desc: "Gezielte Tiefengewebsmassage zum Lösen hartnäckiger Verspannungen im Muskel." },
+                    { iconName: "activity-square", title: "3. Faszien Release", desc: "Spezifische Techniken zur Befreiung verklebter Faszien und Verbesserung der Durchblutung." },
+                    { iconName: "move-up", title: "4. Assisted Stretch", desc: "Geführtes Dehnen zur sofortigen und nachhaltigen Erweiterung deines Bewegungsradius." }
+                ],
+                servicesTitle: "INVESTMENT IN",
+                servicesTitleHighlight: "RECOVERY",
+                servicesSub: "Maßgeschneiderte Behandlungen in ganz Hessen für alle, die das Maximum aus ihrem Körper herausholen wollen.",
+                packages: [
+                    {
+                        name: "Focus Session",
+                        desc: "Gezielte Arbeit an spezifischen Problemzonen.",
+                        price: "74",
+                        time: "45 Min",
+                        features: ["Assessment & Beratung", "Gezielte Deep Tissue Arbeit", "Assisted Stretching", "Anfahrt inklusive (FFM & bis 10km)"],
+                        popular: false
+                    },
+                    {
+                        name: "Full Recovery",
+                        desc: "Umfassende Ganzkörperbehandlung.",
+                        price: "104",
+                        time: "75 Min",
+                        features: ["Full Movement Assessment", "Ganzkörper Sportmassage", "Myofasziales Release", "Mobility Protokoll", "Anfahrt inklusive (FFM & bis 20km)"],
+                        popular: true
+                    },
+                    {
+                        name: "Athlete Package",
+                        desc: "Konsistente Wartung für aktives Training.",
+                        price: "334",
+                        time: "4x 75 Min",
+                        features: ["4 Full Recovery Sessions", "Progress Tracking", "Priority Booking", "2 Monate gültig", "Anfahrt inklusive (FFM & bis 20km)"],
+                        popular: false
+                    },
+                    {
+                        name: "Individuelles Setup",
+                        desc: "Maßgeschneidert auf deine exakten Bedürfnisse.",
+                        price: "Auf Anfrage",
+                        time: "Variabel",
+                        features: ["Personalisiertes Assessment", "Freie Methodenwahl", "Flexible Behandlungsdauer", "Einsatzort nach Absprache in Hessen"],
+                        popular: false
+                    }
+                ],
+                policiesTitle: "Wichtige Buchungshinweise",
+                policyExpress: "<strong>Schnell-Service:</strong> Bei kurzfristigen Anfragen (für Behandlungen innerhalb der nächsten 2 Stunden) ist die Bezahlung im Voraus zu leisten.",
+                policyCancel: "<strong>Stornierungen:</strong> Termine müssen 24 Stunden im Voraus abgesagt werden. Andernfalls wird eine Ausfallgebühr von 15% erhoben.",
+                bookBtn: "Session buchen",
+                footerText: "Zentrale Anlaufstelle: Frankfurt am Main, Hessen (+20km Radius inklusive)",
+                whatsappMessage: "Hallo Felix, ich interessiere mich für eine Recovery Session. Bitte sende mir freie Termine."
+            },
+            en: {
+                navBook: "Book via WhatsApp",
+                heroBadge: "MOBILE SERVICE AVAILABLE",
+                heroTitle1: "ELEVATE YOUR",
+                heroTitle2: "PERFORMANCE",
+                heroSub: "Premium mobile sports massage therapy, centrally based in the heart of Frankfurt am Main, Hessen. I come directly to your home, gym, or office. Designed for hard workers, busy professionals, and athletes.",
+                heroCTA: "Request Session Now",
+                targetAudience: [
+                    { iconName: "activity", title: "Recovery", desc: "Accelerate healing" },
+                    { iconName: "zap", title: "Mobility", desc: "Increase range" },
+                    { iconName: "map-pin", title: "Mobile", desc: "At your location" }
+                ],
+                methodsTitle1: "OUR",
+                methodsTitle2: "METHODS",
+                methodsSub: "A holistic approach tailored individually to your body. Here is what your recovery process looks like:",
+                methods: [
+                    { iconName: "scan-line", title: "1. Assessment", desc: "Initial analysis of your movement patterns and posture to locate imbalances." },
+                    { iconName: "hand", title: "2. Deep Tissue", desc: "Targeted deep tissue massage to release stubborn muscle tension." },
+                    { iconName: "activity-square", title: "3. Fascia Release", desc: "Specific techniques to free restricted fascia and improve blood flow." },
+                    { iconName: "move-up", title: "4. Assisted Stretch", desc: "Guided stretching to immediately and sustainably expand your range of motion." }
+                ],
+                servicesTitle: "INVESTMENT IN",
+                servicesTitleHighlight: "RECOVERY",
+                servicesSub: "Tailored sports therapy across Hessen designed for individuals who demand the most from their bodies.",
+                packages: [
+                    {
+                        name: "Focus Session",
+                        desc: "Targeted work on specific problem areas.",
+                        price: "74",
+                        time: "45 Min",
+                        features: ["Assessment & Consultation", "Targeted Deep Tissue Work", "Assisted Stretching", "Travel included (FFM & within 10km)"],
+                        popular: false
+                    },
+                    {
+                        name: "Full Recovery",
+                        desc: "Comprehensive full-body treatment.",
+                        price: "104",
+                        time: "75 Min",
+                        features: ["Full Movement Assessment", "Full Body Sports Massage", "Myofascial Release", "Mobility Protocol", "Travel included (FFM & within 20km)"],
+                        popular: true
+                    },
+                    {
+                        name: "Athlete Package",
+                        desc: "Consistent maintenance for active training.",
+                        price: "334",
+                        time: "4x 75 Min",
+                        features: ["4 Full Recovery Sessions", "Progress Tracking", "Priority Booking", "Valid for 2 months", "Travel included (FFM & within 20km)"],
+                        popular: false
+                    },
+                    {
+                        name: "Custom Setup",
+                        desc: "Tailored strictly to your exact needs.",
+                        price: "On Request",
+                        time: "Variable",
+                        features: ["Personalized Assessment", "Choice of Methods", "Flexible Duration", "Location across Hessen by arrangement"],
+                        popular: false
+                    }
+                ],
+                policiesTitle: "Important Booking Policies",
+                policyExpress: "<strong>Express Service:</strong> For short-notice requests (treatments within the next 2 hours), payment must be made in advance.",
+                policyCancel: "<strong>Cancellations:</strong> Appointments must be cancelled 24 hours in advance. Otherwise, a 15% cancellation fee will apply.",
+                bookBtn: "Book Session",
+                footerText: "Central hub: Frankfurt am Main, Hessen (+20km radius included)",
+                whatsappMessage: "Hi Felix, I am interested in a recovery session. Please let me know your availability."
+            }
+        };
+
+        // --- APP STATE & CONFIG ---
+        let currentLang = 'de';
+        const phoneNumber = "4917664740838"; // Replace with actual WhatsApp Number
+
+        // --- DOM ELEMENTS ---
+        const langToggleBtn = document.getElementById('langToggleBtn');
+        const langToggleText = document.getElementById('langToggleText');
+        
+        // --- FUNCTIONS ---
+
+        function initApp() {
+            renderContent();
+            setupLangToggle();
+        }
+
+        function renderContent() {
+            const t = content[currentLang];
+
+            // 1. Update simple text nodes
+            document.getElementById('navBookText').textContent = t.navBook;
+            document.getElementById('heroBadge').textContent = t.heroBadge;
+            document.getElementById('heroTitle1').textContent = t.heroTitle1;
+            document.getElementById('heroTitle2').textContent = t.heroTitle2;
+            document.getElementById('heroSub').textContent = t.heroSub;
+            document.getElementById('heroCTA').textContent = t.heroCTA;
+            
+            document.getElementById('methodsTitle1').textContent = t.methodsTitle1;
+            document.getElementById('methodsTitle2').textContent = t.methodsTitle2;
+            document.getElementById('methodsSub').textContent = t.methodsSub;
+
+            document.getElementById('servicesTitle').textContent = t.servicesTitle;
+            document.getElementById('servicesTitleHighlight').textContent = t.servicesTitleHighlight;
+            document.getElementById('servicesSub').textContent = t.servicesSub;
+            
+            document.getElementById('policiesTitle').textContent = t.policiesTitle;
+            document.getElementById('policyExpress').innerHTML = t.policyExpress;
+            document.getElementById('policyCancel').innerHTML = t.policyCancel;
+
+            document.getElementById('footerText').textContent = t.footerText;
+
+            // 2. Render Target Audience (Features Grid)
+            const featuresHTML = t.targetAudience.map((item, idx) => `
+                <div class="flex flex-col items-start gap-2 fade-in-up" style="transition-delay: ${400 + (idx * 100)}ms">
+                    <i data-lucide="${item.iconName}" class="w-6 h-6 text-primary"></i>
+                    <h3 class="text-white font-bold text-sm sm:text-base">${item.title}</h3>
+                    <p class="text-gray-500 text-xs sm:text-sm">${item.desc}</p>
+                </div>
+            `).join('');
+            document.getElementById('featuresGrid').innerHTML = featuresHTML;
+
+            // 3. Render Methods (Stationen Grid)
+            const methodsHTML = t.methods.map((method, idx) => `
+                <div class="flex flex-col items-center text-center gap-3 p-6 bg-card/50 border border-white/5 rounded-2xl fade-in-up hover:border-primary/50 transition-colors" style="transition-delay: ${idx * 150}ms">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
+                        <i data-lucide="${method.iconName}" class="w-6 h-6 text-primary"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-lg">${method.title}</h3>
+                    <p class="text-gray-400 text-sm">${method.desc}</p>
+                </div>
+            `).join('');
+            document.getElementById('methodsGrid').innerHTML = methodsHTML;
+
+            // 4. Render Packages
+            const packagesHTML = t.packages.map((pkg, idx) => {
+                // Determine if price is a number or text (like "Auf Anfrage")
+                const isNumericPrice = !isNaN(parseFloat(pkg.price));
+                const priceDisplay = isNumericPrice ? `€${pkg.price}` : pkg.price;
+                const priceSizeClass = isNumericPrice ? 'text-5xl' : 'text-3xl';
+
+                return `
+                <div class="relative flex flex-col h-full bg-card rounded-3xl p-6 sm:p-8 border transition-all duration-300 hover:-translate-y-2 cursor-pointer group fade-in-up ${pkg.popular ? 'border-primary shadow-[0_0_30px_rgba(204,255,0,0.1)]' : 'border-white/5 hover:border-white/20'}" style="transition-delay: ${idx * 150}ms">
+                    ${pkg.popular ? `
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-black text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
+                            Most Popular
+                        </div>
+                    ` : ''}
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold mb-2">${pkg.name}</h3>
+                        <p class="text-sm text-gray-400 h-10">${pkg.desc}</p>
+                    </div>
+                    <div class="mb-8 flex items-baseline gap-2 flex-wrap">
+                        <span class="${priceSizeClass} font-black leading-none">${priceDisplay}</span>
+                        <span class="text-gray-500 font-medium">/ ${pkg.time}</span>
+                    </div>
+                    <ul class="flex-grow space-y-4 mb-8">
+                        ${pkg.features.map(feature => `
+                            <li class="flex items-start gap-3 text-sm text-gray-300">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 shrink-0 ${pkg.popular ? 'text-primary' : 'text-gray-500 group-hover:text-primary'} transition-colors"></i>
+                                <span>${feature}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                    <button class="wa-btn w-full py-4 rounded-xl font-bold transition-all mt-auto ${pkg.popular ? 'bg-primary text-black hover:bg-white' : 'bg-white/5 text-white hover:bg-primary hover:text-black'}">
+                        ${t.bookBtn}
+                    </button>
+                </div>
+            `}).join('');
+            document.getElementById('packagesGrid').innerHTML = packagesHTML;
+
+            // 5. Re-initialize Lucide Icons for newly injected HTML
+            lucide.createIcons();
+
+            // 6. Setup Intersection Observers for Scroll Animations
+            setupScrollAnimations();
+
+            // 7. Bind WhatsApp Button Logic
+            bindWhatsAppButtons();
+        }
+
+        function setupLangToggle() {
+            langToggleBtn.addEventListener('click', () => {
+                currentLang = currentLang === 'de' ? 'en' : 'de';
+                langToggleText.textContent = currentLang === 'de' ? 'EN' : 'DE';
+                renderContent();
+            });
+        }
+
+        function bindWhatsAppButtons() {
+            const t = content[currentLang];
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(t.whatsappMessage)}`;
+            
+            document.querySelectorAll('.wa-btn').forEach(btn => {
+                // Remove old event listeners by cloning if necessary, or simpler: just assign onclick.
+                btn.onclick = function() {
+                    window.open(url, '_blank');
+                };
+            });
+        }
+
+        function setupScrollAnimations() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // --- START APP ---
+        document.addEventListener('DOMContentLoaded', initApp);
+        
+    </script>
+</body>
+</html>

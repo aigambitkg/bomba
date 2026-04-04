@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felix Bomba - Premium Mobile Recovery Frankfurt</title>
     
-    <!-- Google Fonts for sleek typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -30,7 +28,6 @@
         }
     </script>
 
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
@@ -68,15 +65,13 @@
 </head>
 <body class="bg-dark text-white font-sans overflow-x-hidden min-h-screen">
 
-    <!-- BACKGROUND GLOW EFFECTS -->
     <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-primary rounded-full mix-blend-multiply filter blur-[150px] opacity-10 animate-blob"></div>
         <div class="absolute top-[40%] right-[-10%] w-96 h-96 bg-primary rounded-full mix-blend-multiply filter blur-[120px] opacity-10 animate-blob animation-delay-2000"></div>
     </div>
 
-    <!-- NAVBAR -->
     <nav class="fixed w-full z-50 top-0 bg-dark/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <span class="text-2xl font-black tracking-tighter uppercase">Felix Bomba<span class="text-primary">.</span></span>
             </div>
@@ -94,47 +89,72 @@
         </div>
     </nav>
 
-    <main class="relative z-10 pt-32 pb-24 px-4 sm:px-6 max-w-5xl mx-auto">
+    <main class="relative z-10 pt-32 pb-24 px-4 sm:px-6 max-w-6xl mx-auto">
         
-        <!-- HERO SECTION -->
-        <section class="flex flex-col items-start min-h-[70vh] justify-center relative">
-            <div class="fade-in-up" style="transition-delay: 0ms">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-semibold tracking-wider text-gray-300 mb-6 backdrop-blur-sm">
-                    <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-                    <span id="heroBadge">MOBILE SERVICE VERFÜGBAR</span>
+        <section class="flex flex-col lg:flex-row items-center min-h-[70vh] justify-between relative gap-12 lg:gap-8 pt-8 lg:pt-0">
+            
+            <div class="w-full lg:w-[55%] flex flex-col items-start z-10">
+                <div class="fade-in-up" style="transition-delay: 0ms">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-semibold tracking-wider text-gray-300 mb-6 backdrop-blur-sm">
+                        <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                        <span id="heroBadge">MOBILE SERVICE VERFÜGBAR</span>
+                    </div>
+                </div>
+
+                <div class="fade-in-up" style="transition-delay: 100ms">
+                    <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] uppercase mb-6">
+                        <span id="heroTitle1">OPTIMIERE DEINE</span> <br />
+                        <span class="text-primary" id="heroTitle2">PERFORMANCE</span>
+                    </h1>
+                </div>
+
+                <div class="fade-in-up" style="transition-delay: 200ms">
+                    <p id="heroSub" class="text-lg sm:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
+                        Premium Mobile Sports Massage & Recovery als zentrale Anlaufstelle im Herzen von Frankfurt am Main, Hessen. Ich komme direkt zu dir nach Hause, ins Gym oder ins Büro. Für High-Performer, viel beschäftigte Profis und Athleten.
+                    </p>
+                </div>
+
+                <div class="fade-in-up w-full sm:w-auto" style="transition-delay: 300ms">
+                    <button class="wa-btn group relative flex items-center justify-center gap-3 bg-primary text-black px-8 py-4 rounded-xl font-bold text-lg sm:text-xl w-full sm:w-auto overflow-hidden transition-transform hover:scale-[1.02]">
+                        <span class="relative z-10" id="heroCTA">Jetzt Termin anfragen</span>
+                        <i data-lucide="chevron-right" class="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform"></i>
+                        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity z-0"></div>
+                    </button>
+                </div>
+
+                <div id="featuresGrid" class="grid grid-cols-3 gap-4 sm:gap-8 mt-12 w-full border-t border-white/10 pt-8">
+                    </div>
+            </div>
+
+            <div class="w-full lg:w-[45%] relative mt-10 lg:mt-0 fade-in-up" style="transition-delay: 400ms">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/20 blur-[100px] rounded-full z-0 pointer-events-none opacity-40"></div>
+                
+                <div class="grid grid-cols-2 gap-4 sm:gap-6 relative z-10 items-center max-w-lg mx-auto lg:max-w-none lg:mr-0">
+                    
+                    <div class="w-full h-[300px] sm:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent z-10"></div>
+                        <img 
+                            src="fb1.jpg" 
+                            alt="Felix Bomba Massage Session 1" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                    </div>
+
+                    <div class="w-full h-[300px] sm:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 transform translate-y-8 sm:translate-y-12 group">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent z-10"></div>
+                        <img 
+                            src="fb2.jpg" 
+                            alt="Felix Bomba Massage Session 2" 
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                    </div>
                 </div>
             </div>
 
-            <div class="fade-in-up" style="transition-delay: 100ms">
-                <h1 class="text-5xl sm:text-7xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase mb-6">
-                    <span id="heroTitle1">OPTIMIERE DEINE</span> <br />
-                    <span class="text-primary" id="heroTitle2">PERFORMANCE</span>
-                </h1>
-            </div>
-
-            <div class="fade-in-up" style="transition-delay: 200ms">
-                <p id="heroSub" class="text-lg sm:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
-                    Premium Mobile Sports Massage & Recovery als zentrale Anlaufstelle im Herzen von Frankfurt am Main, Hessen. Ich komme direkt zu dir nach Hause, ins Gym oder ins Büro. Für High-Performer, viel beschäftigte Profis und Athleten.
-                </p>
-            </div>
-
-            <div class="fade-in-up" style="transition-delay: 300ms w-full sm:w-auto">
-                <button class="wa-btn group relative flex items-center justify-center gap-3 bg-primary text-black px-8 py-4 rounded-xl font-bold text-lg sm:text-xl w-full sm:w-auto overflow-hidden transition-transform hover:scale-[1.02]">
-                    <span class="relative z-10" id="heroCTA">Jetzt Termin anfragen</span>
-                    <i data-lucide="chevron-right" class="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform"></i>
-                    <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity z-0"></div>
-                </button>
-            </div>
-
-            <!-- Quick Value Props -->
-            <div id="featuresGrid" class="grid grid-cols-3 gap-4 sm:gap-8 mt-16 w-full border-t border-white/10 pt-8">
-                <!-- Populated by JS -->
-            </div>
         </section>
 
-        <!-- IMAGE BREAK -->
         <div class="fade-in-up" style="transition-delay: 100ms">
-            <div class="w-full h-64 sm:h-96 rounded-3xl overflow-hidden relative my-20 group bg-card">
+            <div class="w-full h-64 sm:h-96 rounded-3xl overflow-hidden relative mt-32 mb-20 group bg-card">
                 <img 
                     src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop" 
                     alt="Sports Massage Therapy Frankfurt" 
@@ -144,7 +164,6 @@
             </div>
         </div>
 
-        <!-- METHODS / STATIONEN -->
         <section class="py-10" id="methods">
             <div class="fade-in-up text-center mb-16">
                 <h2 class="text-4xl sm:text-5xl font-black tracking-tight uppercase mb-4">
@@ -157,11 +176,9 @@
             </div>
 
             <div id="methodsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- Populated by JS -->
-            </div>
+                </div>
         </section>
 
-        <!-- SERVICES / PACKAGES -->
         <section class="py-16 mt-10 border-t border-white/5" id="services">
             <div class="fade-in-up text-center mb-16">
                 <h2 class="text-4xl sm:text-5xl font-black tracking-tight uppercase mb-4">
@@ -174,10 +191,8 @@
             </div>
 
             <div id="packagesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Populated by JS -->
-            </div>
+                </div>
 
-            <!-- POLICIES BOX -->
             <div class="fade-in-up mt-16 max-w-3xl mx-auto bg-primary/5 border border-primary/20 rounded-2xl p-6 sm:p-8">
                 <h3 class="text-primary font-bold text-lg mb-4 flex items-center gap-2">
                     <i data-lucide="info" class="w-5 h-5"></i>
@@ -198,7 +213,6 @@
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="border-t border-white/5 bg-darker py-8 text-center mt-20">
         <div class="flex justify-center items-center gap-2 text-gray-500 text-sm mb-4">
             <i data-lucide="map-pin" class="w-4 h-4"></i>
@@ -209,21 +223,19 @@
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP BUTTON -->
     <button class="wa-btn fixed bottom-6 right-6 z-50 bg-primary text-black p-4 rounded-full shadow-[0_0_20px_rgba(204,255,0,0.4)] hover:scale-110 transition-transform flex items-center justify-center animate-bounce" style="animation-duration: 3s;" aria-label="Contact on WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="w-8 h-8">
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-5.824 4.74-10.563 10.564-10.563 5.826 0 10.564 4.741 10.564 10.564 0 5.822-4.74 10.561-10.564 10.561z"/>
         </svg>
     </button>
 
-    <!-- MAIN JAVASCRIPT LOGIC -->
     <script>
         // --- TRANSLATIONS DATA ---
         const content = {
             de: {
                 navBook: "Via WhatsApp buchen",
                 heroBadge: "MOBILE SERVICE VERFÜGBAR",
-                heroTitle1: "OPTIIMERE DEINE",
+                heroTitle1: "OPTIMIERE DEINE", // <-- Hier wurde der Tippfehler korrigiert
                 heroTitle2: "PERFORMANCE",
                 heroSub: "Premium Mobile Sports Massage & Recovery als zentrale Anlaufstelle im Herzen von Frankfurt am Main, Hessen. Ich komme direkt zu dir nach Hause, ins Gym oder ins Büro. Für High-Performer, viel beschäftigte Profis und Athleten.",
                 heroCTA: "Jetzt Termin anfragen",
@@ -474,7 +486,6 @@
             const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(t.whatsappMessage)}`;
             
             document.querySelectorAll('.wa-btn').forEach(btn => {
-                // Remove old event listeners by cloning if necessary, or simpler: just assign onclick.
                 btn.onclick = function() {
                     window.open(url, '_blank');
                 };

@@ -89,76 +89,79 @@
         </div>
     </nav>
 
-    <main class="relative z-10 pt-32 pb-24 px-4 sm:px-6 max-w-6xl mx-auto">
+    <div id="hero-scroll-container" class="relative h-[150vh] lg:h-[180vh] z-10">
         
-        <section class="flex flex-col lg:flex-row items-center min-h-[70vh] justify-between relative gap-12 lg:gap-8 pt-8 lg:pt-0">
-            
-            <div class="w-full lg:w-[55%] flex flex-col items-start z-10">
-                <div class="fade-in-up" style="transition-delay: 0ms">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-semibold tracking-wider text-gray-300 mb-6 backdrop-blur-sm">
-                        <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-                        <span id="heroBadge">MOBILE SERVICE VERFÜGBAR</span>
-                    </div>
-                </div>
-
-                <div class="fade-in-up" style="transition-delay: 100ms">
-                    <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] uppercase mb-6">
-                        <span id="heroTitle1">OPTIMIERE DEINE</span> <br />
-                        <span class="text-primary" id="heroTitle2">PERFORMANCE</span>
-                    </h1>
-                </div>
-
-                <div class="fade-in-up" style="transition-delay: 200ms">
-                    <p id="heroSub" class="text-lg sm:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
-                        Premium Mobile Sports Massage & Recovery als zentrale Anlaufstelle im Herzen von Frankfurt am Main, Hessen. Ich komme direkt zu dir nach Hause, ins Gym oder ins Büro. Für High-Performer, viel beschäftigte Profis und Athleten.
-                    </p>
-                </div>
-
-                <div class="fade-in-up w-full sm:w-auto" style="transition-delay: 300ms">
-                    <button class="wa-btn group relative flex items-center justify-center gap-3 bg-primary text-black px-8 py-4 rounded-xl font-bold text-lg sm:text-xl w-full sm:w-auto overflow-hidden transition-transform hover:scale-[1.02]">
-                        <span class="relative z-10" id="heroCTA">Jetzt Termin anfragen</span>
-                        <i data-lucide="chevron-right" class="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform"></i>
-                        <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity z-0"></div>
-                    </button>
-                </div>
-
-                <div id="featuresGrid" class="grid grid-cols-3 gap-4 sm:gap-8 mt-12 w-full border-t border-white/10 pt-8">
-                    </div>
-            </div>
-
-            <div class="w-full lg:w-[45%] relative mt-10 lg:mt-0 fade-in-up" style="transition-delay: 400ms">
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/20 blur-[100px] rounded-full z-0 pointer-events-none opacity-40"></div>
+        <section class="sticky top-0 min-h-screen w-full flex items-center pt-24 pb-12 overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
                 
-                <div class="grid grid-cols-2 gap-4 sm:gap-6 relative z-10 items-center max-w-lg mx-auto lg:max-w-none lg:mr-0">
-                    
-                    <div class="w-full h-[300px] sm:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent z-10"></div>
-                        <img 
-                            src="fb1.jpg" 
-                            alt="Felix Bomba Massage Session 1" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        />
+                <div class="w-full lg:w-[55%] flex flex-col items-start z-10">
+                    <div class="fade-in-up" style="transition-delay: 0ms">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-semibold tracking-wider text-gray-300 mb-6 backdrop-blur-sm">
+                            <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                            <span id="heroBadge">MOBILE SERVICE VERFÜGBAR</span>
+                        </div>
                     </div>
 
-                    <div class="w-full h-[300px] sm:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 transform translate-y-8 sm:translate-y-12 group">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent z-10"></div>
+                    <div class="fade-in-up" style="transition-delay: 100ms">
+                        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] uppercase mb-6">
+                            <span id="heroTitle1">OPTIMIERE DEINE</span> <br />
+                            <span class="text-primary" id="heroTitle2">PERFORMANCE</span>
+                        </h1>
+                    </div>
+
+                    <div class="fade-in-up" style="transition-delay: 200ms">
+                        <p id="heroSub" class="text-lg sm:text-xl text-gray-400 max-w-2xl mb-8 leading-relaxed">
+                            Premium Mobile Sports Massage & Recovery als zentrale Anlaufstelle im Herzen von Frankfurt am Main, Hessen. Ich komme direkt zu dir nach Hause, ins Gym oder ins Büro. Für High-Performer, viel beschäftigte Profis und Athleten.
+                        </p>
+                    </div>
+
+                    <div class="fade-in-up w-full sm:w-auto" style="transition-delay: 300ms">
+                        <button class="wa-btn group relative flex items-center justify-center gap-3 bg-primary text-black px-8 py-4 rounded-xl font-bold text-lg sm:text-xl w-full sm:w-auto overflow-hidden transition-transform hover:scale-[1.02]">
+                            <span class="relative z-10" id="heroCTA">Jetzt Termin anfragen</span>
+                            <i data-lucide="chevron-right" class="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform"></i>
+                            <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity z-0"></div>
+                        </button>
+                    </div>
+
+                    <div id="featuresGrid" class="grid grid-cols-3 gap-4 sm:gap-8 mt-12 w-full border-t border-white/10 pt-8">
+                        </div>
+                </div>
+
+                <div class="w-full lg:w-[45%] relative mt-8 lg:mt-0 fade-in-up" style="transition-delay: 400ms">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/20 blur-[100px] rounded-full z-0 pointer-events-none opacity-40"></div>
+                    
+                    <div class="w-full h-[350px] sm:h-[450px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 relative group z-10 max-w-lg mx-auto lg:max-w-none">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent z-20 pointer-events-none"></div>
+                        
                         <img 
-                            src="fb2.jpg" 
+                            id="hero-img-1"
+                            src="fb1.png" 
+                            alt="Felix Bomba Massage Session 1" 
+                            class="absolute inset-0 w-full h-full object-cover transition-all duration-[1200ms] ease-in-out opacity-100 scale-100 z-10"
+                        />
+
+                        <img 
+                            id="hero-img-2"
+                            src="fb2.png" 
                             alt="Felix Bomba Massage Session 2" 
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            class="absolute inset-0 w-full h-full object-cover transition-all duration-[1200ms] ease-in-out opacity-0 scale-[1.1] z-10"
                         />
                     </div>
                 </div>
+
             </div>
-
         </section>
+    </div>
 
+    <main class="relative z-10 pb-24 px-4 sm:px-6 max-w-6xl mx-auto">
+        
         <div class="fade-in-up" style="transition-delay: 100ms">
-            <div class="w-full h-64 sm:h-96 rounded-3xl overflow-hidden relative mt-32 mb-20 group bg-card">
+            <div class="w-full h-48 sm:h-80 rounded-3xl overflow-hidden relative mt-20 mb-20 group bg-card border border-white/5">
                 <img 
                     src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop" 
                     alt="Sports Massage Therapy Frankfurt" 
-                    class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700 group-hover:scale-105 transform"
+                    class="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-700 group-hover:scale-105 transform"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
             </div>
@@ -235,7 +238,7 @@
             de: {
                 navBook: "Via WhatsApp buchen",
                 heroBadge: "MOBILE SERVICE VERFÜGBAR",
-                heroTitle1: "OPTIMIERE DEINE", // <-- Hier wurde der Tippfehler korrigiert
+                heroTitle1: "OPTIMIERE DEINE",
                 heroTitle2: "PERFORMANCE",
                 heroSub: "Premium Mobile Sports Massage & Recovery als zentrale Anlaufstelle im Herzen von Frankfurt am Main, Hessen. Ich komme direkt zu dir nach Hause, ins Gym oder ins Büro. Für High-Performer, viel beschäftigte Profis und Athleten.",
                 heroCTA: "Jetzt Termin anfragen",
@@ -377,6 +380,7 @@
         function initApp() {
             renderContent();
             setupLangToggle();
+            setupHeroScrollAnimation();
         }
 
         function renderContent() {
@@ -463,10 +467,10 @@
             `}).join('');
             document.getElementById('packagesGrid').innerHTML = packagesHTML;
 
-            // 5. Re-initialize Lucide Icons for newly injected HTML
+            // 5. Re-initialize Lucide Icons
             lucide.createIcons();
 
-            // 6. Setup Intersection Observers for Scroll Animations
+            // 6. Setup Scroll Animations
             setupScrollAnimations();
 
             // 7. Bind WhatsApp Button Logic
@@ -492,6 +496,41 @@
             });
         }
 
+        // --- STICKY SCROLL BILD-WECHSEL LOGIK ---
+        function setupHeroScrollAnimation() {
+            const container = document.getElementById('hero-scroll-container');
+            const img1 = document.getElementById('hero-img-1');
+            const img2 = document.getElementById('hero-img-2');
+
+            if (container && img1 && img2) {
+                window.addEventListener('scroll', () => {
+                    // Position des Scroll-Containers berechnen
+                    const rect = container.getBoundingClientRect();
+                    
+                    // Berechnen, wie weit wir (in Prozent) durch den Container gescrollt sind
+                    let progress = -rect.top / (rect.height - window.innerHeight);
+                    
+                    // Wenn wir über ca. 30% des Hero-Containers gescrollt haben, wechselt das Bild
+                    if (progress > 0.3) {
+                        // Bild 1 ausblenden und leicht vergrößern
+                        img1.classList.remove('opacity-100', 'scale-100');
+                        img1.classList.add('opacity-0', 'scale-[1.1]');
+                        
+                        // Bild 2 einblenden
+                        img2.classList.remove('opacity-0', 'scale-[1.1]');
+                        img2.classList.add('opacity-100', 'scale-100');
+                    } else {
+                        // Wieder zurück zu Bild 1
+                        img1.classList.remove('opacity-0', 'scale-[1.1]');
+                        img1.classList.add('opacity-100', 'scale-100');
+                        
+                        img2.classList.remove('opacity-100', 'scale-100');
+                        img2.classList.add('opacity-0', 'scale-[1.1]');
+                    }
+                });
+            }
+        }
+
         function setupScrollAnimations() {
             const observerOptions = {
                 root: null,
@@ -503,7 +542,7 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target); // Only animate once
+                        observer.unobserve(entry.target); 
                     }
                 });
             }, observerOptions);

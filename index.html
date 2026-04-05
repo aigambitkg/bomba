@@ -18,7 +18,7 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        primary: '#ccff00', // Neon Green/Yellow accent
+                        primary: '#ccff00',
                         dark: '#050505',
                         darker: '#0a0a0a',
                         card: '#111111'
@@ -31,7 +31,6 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        /* Background Animations */
         @keyframes blob {
             0% { transform: translate(0px, 0px) scale(1); }
             33% { transform: translate(30px, -50px) scale(1.1); }
@@ -45,7 +44,6 @@
             animation-delay: 2s;
         }
 
-        /* Scroll Animations (Intersection Observer targets) */
         .fade-in-up {
             opacity: 0;
             transform: translateY(40px);
@@ -56,7 +54,6 @@
             transform: translateY(0);
         }
 
-        /* Global Selection Color */
         ::selection {
             background-color: #ccff00;
             color: #000;
@@ -71,9 +68,9 @@
     </div>
 
     <nav class="fixed w-full z-50 top-0 bg-dark/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <span class="text-2xl font-black tracking-tighter uppercase">Felix Bomba<span class="text-primary">.</span></span>
+                <span class="text-xl sm:text-2xl font-black tracking-tighter uppercase">Felix Bomba<span class="text-primary">.</span></span>
             </div>
             
             <div class="flex items-center gap-4">
@@ -91,46 +88,46 @@
 
     <div id="hero-scroll-container" class="relative h-[150vh] lg:h-[180vh] z-10">
         
-        <section class="sticky top-0 min-h-screen w-full flex items-center pt-24 pb-12 overflow-hidden">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <section class="sticky top-0 min-h-[100svh] w-full flex items-center pt-20 sm:pt-24 pb-8 overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12">
                 
                 <div class="w-full lg:w-[55%] flex flex-col items-start z-10">
                     <div class="fade-in-up" style="transition-delay: 0ms">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-semibold tracking-wider text-gray-300 mb-6 backdrop-blur-sm">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] sm:text-xs font-semibold tracking-wider text-gray-300 mb-4 sm:mb-6 backdrop-blur-sm">
                             <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
                             <span id="heroBadge">MOBILE SERVICE VERFÜGBAR</span>
                         </div>
                     </div>
 
                     <div class="fade-in-up" style="transition-delay: 100ms">
-                        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] uppercase mb-6">
+                        <h1 class="text-4xl sm:text-6xl lg:text-8xl font-black tracking-tighter leading-[1] uppercase mb-4 sm:mb-6">
                             <span id="heroTitle1">OPTIMIERE DEINE</span> <br />
                             <span class="text-primary" id="heroTitle2">PERFORMANCE</span>
                         </h1>
                     </div>
 
                     <div class="fade-in-up" style="transition-delay: 200ms">
-                        <p id="heroSub" class="text-lg sm:text-xl text-gray-400 max-w-2xl mb-8 leading-relaxed">
+                        <p id="heroSub" class="text-sm sm:text-xl text-gray-400 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
                             Premium Mobile Sports Massage & Recovery als zentrale Anlaufstelle im Herzen von Frankfurt am Main, Hessen. Ich komme direkt zu dir nach Hause, ins Gym oder ins Büro. Für High-Performer, viel beschäftigte Profis und Athleten.
                         </p>
                     </div>
 
                     <div class="fade-in-up w-full sm:w-auto" style="transition-delay: 300ms">
-                        <button class="wa-btn group relative flex items-center justify-center gap-3 bg-primary text-black px-8 py-4 rounded-xl font-bold text-lg sm:text-xl w-full sm:w-auto overflow-hidden transition-transform hover:scale-[1.02]">
+                        <button class="wa-btn group relative flex items-center justify-center gap-3 bg-primary text-black px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-xl w-full sm:w-auto overflow-hidden transition-transform hover:scale-[1.02]">
                             <span class="relative z-10" id="heroCTA">Jetzt Termin anfragen</span>
-                            <i data-lucide="chevron-right" class="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform"></i>
+                            <i data-lucide="chevron-right" class="w-5 h-5 sm:w-6 sm:h-6 relative z-10 group-hover:translate-x-1 transition-transform"></i>
                             <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity z-0"></div>
                         </button>
                     </div>
 
-                    <div id="featuresGrid" class="grid grid-cols-3 gap-4 sm:gap-8 mt-12 w-full border-t border-white/10 pt-8">
-                        </div>
+                    <div id="featuresGrid" class="grid grid-cols-3 gap-3 sm:gap-8 mt-8 sm:mt-12 w-full border-t border-white/10 pt-6 sm:pt-8">
+                    </div>
                 </div>
 
-                <div class="w-full lg:w-[45%] relative mt-8 lg:mt-0 fade-in-up" style="transition-delay: 400ms">
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/20 blur-[100px] rounded-full z-0 pointer-events-none opacity-40"></div>
+                <div class="w-full lg:w-[45%] relative mt-4 lg:mt-0 fade-in-up" style="transition-delay: 400ms">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/20 blur-[80px] rounded-full z-0 pointer-events-none opacity-40"></div>
                     
-                    <div class="w-full h-[350px] sm:h-[450px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 relative group z-10 max-w-lg mx-auto lg:max-w-none">
+                    <div class="w-full h-[260px] sm:h-[450px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl border border-white/10 relative group z-10 max-w-[320px] sm:max-w-lg mx-auto lg:max-w-none">
                         
                         <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent z-20 pointer-events-none"></div>
                         
@@ -138,14 +135,14 @@
                             id="hero-img-1"
                             src="fb1.png" 
                             alt="Felix Bomba Massage Session 1" 
-                            class="absolute inset-0 w-full h-full object-cover transition-all duration-[1200ms] ease-in-out opacity-100 scale-100 z-10"
+                            class="absolute inset-0 w-full h-full object-cover transition-all duration-200 ease-in-out opacity-100 scale-100 z-10"
                         />
 
                         <img 
                             id="hero-img-2"
                             src="fb2.png" 
                             alt="Felix Bomba Massage Session 2" 
-                            class="absolute inset-0 w-full h-full object-cover transition-all duration-[1200ms] ease-in-out opacity-0 scale-[1.1] z-10"
+                            class="absolute inset-0 w-full h-full object-cover transition-all duration-200 ease-in-out opacity-0 scale-[1.05] z-10"
                         />
                     </div>
                 </div>
@@ -157,7 +154,7 @@
     <main class="relative z-10 pb-24 px-4 sm:px-6 max-w-6xl mx-auto">
         
         <div class="fade-in-up" style="transition-delay: 100ms">
-            <div class="w-full h-48 sm:h-80 rounded-3xl overflow-hidden relative mt-20 mb-20 group bg-card border border-white/5">
+            <div class="w-full h-32 sm:h-80 rounded-3xl overflow-hidden relative mt-10 sm:mt-20 mb-16 sm:mb-20 group bg-card border border-white/5">
                 <img 
                     src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop" 
                     alt="Sports Massage Therapy Frankfurt" 
@@ -167,47 +164,47 @@
             </div>
         </div>
 
-        <section class="py-10" id="methods">
-            <div class="fade-in-up text-center mb-16">
-                <h2 class="text-4xl sm:text-5xl font-black tracking-tight uppercase mb-4">
+        <section class="py-8 sm:py-10" id="methods">
+            <div class="fade-in-up text-center mb-10 sm:mb-16">
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tight uppercase mb-3 sm:mb-4">
                     <span id="methodsTitle1">UNSERE</span> <br/>
                     <span class="text-primary" id="methodsTitle2">STATIONEN</span>
                 </h2>
-                <p id="methodsSub" class="text-gray-400 max-w-2xl mx-auto">
+                <p id="methodsSub" class="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
                     Ein ganzheitlicher Ansatz, der individuell auf deinen Körper abgestimmt wird. So sieht dein Recovery-Prozess aus:
                 </p>
             </div>
 
-            <div id="methodsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                </div>
+            <div id="methodsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            </div>
         </section>
 
-        <section class="py-16 mt-10 border-t border-white/5" id="services">
-            <div class="fade-in-up text-center mb-16">
-                <h2 class="text-4xl sm:text-5xl font-black tracking-tight uppercase mb-4">
+        <section class="py-12 sm:py-16 mt-8 sm:mt-10 border-t border-white/5" id="services">
+            <div class="fade-in-up text-center mb-10 sm:mb-16">
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tight uppercase mb-3 sm:mb-4">
                     <span id="servicesTitle">INVESTMENT IN</span> <br/>
                     <span class="text-primary" id="servicesTitleHighlight">RECOVERY</span>
                 </h2>
-                <p id="servicesSub" class="text-gray-400 max-w-xl mx-auto">
+                <p id="servicesSub" class="text-sm sm:text-base text-gray-400 max-w-xl mx-auto">
                     Maßgeschneiderte Behandlungen in ganz Hessen für alle, die das Maximum aus ihrem Körper herausholen wollen.
                 </p>
             </div>
 
             <div id="packagesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                </div>
+            </div>
 
-            <div class="fade-in-up mt-16 max-w-3xl mx-auto bg-primary/5 border border-primary/20 rounded-2xl p-6 sm:p-8">
-                <h3 class="text-primary font-bold text-lg mb-4 flex items-center gap-2">
+            <div class="fade-in-up mt-12 sm:mt-16 max-w-3xl mx-auto bg-primary/5 border border-primary/20 rounded-2xl p-5 sm:p-8">
+                <h3 class="text-primary font-bold text-base sm:text-lg mb-3 sm:mb-4 flex items-center gap-2">
                     <i data-lucide="info" class="w-5 h-5"></i>
                     <span id="policiesTitle">Wichtige Buchungshinweise</span>
                 </h3>
-                <div class="space-y-4 text-sm sm:text-base text-gray-300">
+                <div class="space-y-3 sm:space-y-4 text-xs sm:text-sm text-gray-300">
                     <p class="flex items-start gap-3">
-                        <i data-lucide="clock-4" class="w-5 h-5 shrink-0 text-primary mt-0.5"></i>
+                        <i data-lucide="clock-4" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-primary mt-0.5"></i>
                         <span id="policyExpress"><strong>Schnell-Service:</strong> Bei kurzfristigen Anfragen (für Behandlungen innerhalb der nächsten 2 Stunden) ist die Bezahlung im Voraus zu leisten.</span>
                     </p>
                     <p class="flex items-start gap-3">
-                        <i data-lucide="alert-triangle" class="w-5 h-5 shrink-0 text-primary mt-0.5"></i>
+                        <i data-lucide="alert-triangle" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-primary mt-0.5"></i>
                         <span id="policyCancel"><strong>Stornierungen:</strong> Termine müssen 24 Stunden im Voraus abgesagt werden. Andernfalls wird eine Ausfallgebühr von 15% erhoben.</span>
                     </p>
                 </div>
@@ -216,24 +213,23 @@
 
     </main>
 
-    <footer class="border-t border-white/5 bg-darker py-8 text-center mt-20">
-        <div class="flex justify-center items-center gap-2 text-gray-500 text-sm mb-4">
-            <i data-lucide="map-pin" class="w-4 h-4"></i>
+    <footer class="border-t border-white/5 bg-darker py-8 text-center mt-12 sm:mt-20">
+        <div class="flex justify-center items-center gap-2 text-gray-500 text-xs sm:text-sm mb-4 px-4">
+            <i data-lucide="map-pin" class="w-4 h-4 shrink-0"></i>
             <span id="footerText">Zentrale Anlaufstelle: Frankfurt am Main, Hessen (+20km Radius inklusive)</span>
         </div>
-        <div class="text-2xl font-black tracking-tighter text-gray-700 uppercase">
+        <div class="text-xl sm:text-2xl font-black tracking-tighter text-gray-700 uppercase">
             Felix Bomba<span class="text-primary">.</span>
         </div>
     </footer>
 
-    <button class="wa-btn fixed bottom-6 right-6 z-50 bg-primary text-black p-4 rounded-full shadow-[0_0_20px_rgba(204,255,0,0.4)] hover:scale-110 transition-transform flex items-center justify-center animate-bounce" style="animation-duration: 3s;" aria-label="Contact on WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="w-8 h-8">
+    <button class="wa-btn fixed bottom-6 right-6 z-50 bg-primary text-black p-3 sm:p-4 rounded-full shadow-[0_0_20px_rgba(204,255,0,0.4)] hover:scale-110 transition-transform flex items-center justify-center animate-bounce" style="animation-duration: 3s;" aria-label="Contact on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="w-7 h-7 sm:w-8 sm:h-8">
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-5.824 4.74-10.563 10.564-10.563 5.826 0 10.564 4.741 10.564 10.564 0 5.822-4.74 10.561-10.564 10.561z"/>
         </svg>
     </button>
 
     <script>
-        // --- TRANSLATIONS DATA ---
         const content = {
             de: {
                 navBook: "Via WhatsApp buchen",
@@ -367,16 +363,12 @@
             }
         };
 
-        // --- APP STATE & CONFIG ---
         let currentLang = 'de';
-        const phoneNumber = "4917664740838"; // Replace with actual WhatsApp Number
+        const phoneNumber = "4917664740838"; 
 
-        // --- DOM ELEMENTS ---
         const langToggleBtn = document.getElementById('langToggleBtn');
         const langToggleText = document.getElementById('langToggleText');
         
-        // --- FUNCTIONS ---
-
         function initApp() {
             renderContent();
             setupLangToggle();
@@ -386,7 +378,6 @@
         function renderContent() {
             const t = content[currentLang];
 
-            // 1. Update simple text nodes
             document.getElementById('navBookText').textContent = t.navBook;
             document.getElementById('heroBadge').textContent = t.heroBadge;
             document.getElementById('heroTitle1').textContent = t.heroTitle1;
@@ -408,72 +399,63 @@
 
             document.getElementById('footerText').textContent = t.footerText;
 
-            // 2. Render Target Audience (Features Grid)
             const featuresHTML = t.targetAudience.map((item, idx) => `
-                <div class="flex flex-col items-start gap-2 fade-in-up" style="transition-delay: ${400 + (idx * 100)}ms">
-                    <i data-lucide="${item.iconName}" class="w-6 h-6 text-primary"></i>
-                    <h3 class="text-white font-bold text-sm sm:text-base">${item.title}</h3>
-                    <p class="text-gray-500 text-xs sm:text-sm">${item.desc}</p>
+                <div class="flex flex-col items-start gap-1 sm:gap-2 fade-in-up" style="transition-delay: ${400 + (idx * 100)}ms">
+                    <i data-lucide="${item.iconName}" class="w-5 h-5 sm:w-6 sm:h-6 text-primary"></i>
+                    <h3 class="text-white font-bold text-[13px] sm:text-base">${item.title}</h3>
+                    <p class="text-gray-500 text-[11px] sm:text-sm leading-tight">${item.desc}</p>
                 </div>
             `).join('');
             document.getElementById('featuresGrid').innerHTML = featuresHTML;
 
-            // 3. Render Methods (Stationen Grid)
             const methodsHTML = t.methods.map((method, idx) => `
-                <div class="flex flex-col items-center text-center gap-3 p-6 bg-card/50 border border-white/5 rounded-2xl fade-in-up hover:border-primary/50 transition-colors" style="transition-delay: ${idx * 150}ms">
-                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2">
-                        <i data-lucide="${method.iconName}" class="w-6 h-6 text-primary"></i>
+                <div class="flex flex-col items-center text-center gap-2 sm:gap-3 p-5 sm:p-6 bg-card/50 border border-white/5 rounded-2xl fade-in-up hover:border-primary/50 transition-colors" style="transition-delay: ${idx * 150}ms">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mb-1 sm:mb-2">
+                        <i data-lucide="${method.iconName}" class="w-5 h-5 sm:w-6 sm:h-6 text-primary"></i>
                     </div>
-                    <h3 class="text-white font-bold text-lg">${method.title}</h3>
-                    <p class="text-gray-400 text-sm">${method.desc}</p>
+                    <h3 class="text-white font-bold text-base sm:text-lg">${method.title}</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm">${method.desc}</p>
                 </div>
             `).join('');
             document.getElementById('methodsGrid').innerHTML = methodsHTML;
 
-            // 4. Render Packages
             const packagesHTML = t.packages.map((pkg, idx) => {
-                // Determine if price is a number or text (like "Auf Anfrage")
                 const isNumericPrice = !isNaN(parseFloat(pkg.price));
                 const priceDisplay = isNumericPrice ? `€${pkg.price}` : pkg.price;
-                const priceSizeClass = isNumericPrice ? 'text-5xl' : 'text-3xl';
+                const priceSizeClass = isNumericPrice ? 'text-4xl sm:text-5xl' : 'text-2xl sm:text-3xl';
 
                 return `
-                <div class="relative flex flex-col h-full bg-card rounded-3xl p-6 sm:p-8 border transition-all duration-300 hover:-translate-y-2 cursor-pointer group fade-in-up ${pkg.popular ? 'border-primary shadow-[0_0_30px_rgba(204,255,0,0.1)]' : 'border-white/5 hover:border-white/20'}" style="transition-delay: ${idx * 150}ms">
+                <div class="relative flex flex-col h-full bg-card rounded-3xl p-5 sm:p-8 border transition-all duration-300 hover:-translate-y-2 cursor-pointer group fade-in-up ${pkg.popular ? 'border-primary shadow-[0_0_30px_rgba(204,255,0,0.1)]' : 'border-white/5 hover:border-white/20'}" style="transition-delay: ${idx * 150}ms">
                     ${pkg.popular ? `
-                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-black text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-black text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                             Most Popular
                         </div>
                     ` : ''}
-                    <div class="mb-6">
-                        <h3 class="text-2xl font-bold mb-2">${pkg.name}</h3>
-                        <p class="text-sm text-gray-400 h-10">${pkg.desc}</p>
+                    <div class="mb-4 sm:mb-6 mt-2 sm:mt-0">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-1 sm:mb-2">${pkg.name}</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 h-8 sm:h-10">${pkg.desc}</p>
                     </div>
-                    <div class="mb-8 flex items-baseline gap-2 flex-wrap">
+                    <div class="mb-6 flex items-baseline gap-2 flex-wrap">
                         <span class="${priceSizeClass} font-black leading-none">${priceDisplay}</span>
-                        <span class="text-gray-500 font-medium">/ ${pkg.time}</span>
+                        <span class="text-gray-500 font-medium text-sm sm:text-base">/ ${pkg.time}</span>
                     </div>
-                    <ul class="flex-grow space-y-4 mb-8">
+                    <ul class="flex-grow space-y-3 mb-6 sm:mb-8">
                         ${pkg.features.map(feature => `
-                            <li class="flex items-start gap-3 text-sm text-gray-300">
-                                <i data-lucide="check-circle-2" class="w-5 h-5 shrink-0 ${pkg.popular ? 'text-primary' : 'text-gray-500 group-hover:text-primary'} transition-colors"></i>
+                            <li class="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm text-gray-300">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0 ${pkg.popular ? 'text-primary' : 'text-gray-500 group-hover:text-primary'} transition-colors mt-0.5"></i>
                                 <span>${feature}</span>
                             </li>
                         `).join('')}
                     </ul>
-                    <button class="wa-btn w-full py-4 rounded-xl font-bold transition-all mt-auto ${pkg.popular ? 'bg-primary text-black hover:bg-white' : 'bg-white/5 text-white hover:bg-primary hover:text-black'}">
+                    <button class="wa-btn w-full py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all mt-auto ${pkg.popular ? 'bg-primary text-black hover:bg-white' : 'bg-white/5 text-white hover:bg-primary hover:text-black'}">
                         ${t.bookBtn}
                     </button>
                 </div>
             `}).join('');
             document.getElementById('packagesGrid').innerHTML = packagesHTML;
 
-            // 5. Re-initialize Lucide Icons
             lucide.createIcons();
-
-            // 6. Setup Scroll Animations
             setupScrollAnimations();
-
-            // 7. Bind WhatsApp Button Logic
             bindWhatsAppButtons();
         }
 
@@ -496,7 +478,6 @@
             });
         }
 
-        // --- STICKY SCROLL BILD-WECHSEL LOGIK ---
         function setupHeroScrollAnimation() {
             const container = document.getElementById('hero-scroll-container');
             const img1 = document.getElementById('hero-img-1');
@@ -504,28 +485,21 @@
 
             if (container && img1 && img2) {
                 window.addEventListener('scroll', () => {
-                    // Position des Scroll-Containers berechnen
                     const rect = container.getBoundingClientRect();
-                    
-                    // Berechnen, wie weit wir (in Prozent) durch den Container gescrollt sind
                     let progress = -rect.top / (rect.height - window.innerHeight);
                     
-                    // Wenn wir über ca. 30% des Hero-Containers gescrollt haben, wechselt das Bild
                     if (progress > 0.3) {
-                        // Bild 1 ausblenden und leicht vergrößern
                         img1.classList.remove('opacity-100', 'scale-100');
-                        img1.classList.add('opacity-0', 'scale-[1.1]');
+                        img1.classList.add('opacity-0', 'scale-[1.05]');
                         
-                        // Bild 2 einblenden
-                        img2.classList.remove('opacity-0', 'scale-[1.1]');
+                        img2.classList.remove('opacity-0', 'scale-[1.05]');
                         img2.classList.add('opacity-100', 'scale-100');
                     } else {
-                        // Wieder zurück zu Bild 1
-                        img1.classList.remove('opacity-0', 'scale-[1.1]');
+                        img1.classList.remove('opacity-0', 'scale-[1.05]');
                         img1.classList.add('opacity-100', 'scale-100');
                         
                         img2.classList.remove('opacity-100', 'scale-100');
-                        img2.classList.add('opacity-0', 'scale-[1.1]');
+                        img2.classList.add('opacity-0', 'scale-[1.05]');
                     }
                 });
             }
@@ -552,9 +526,7 @@
             });
         }
 
-        // --- START APP ---
         document.addEventListener('DOMContentLoaded', initApp);
-        
     </script>
 </body>
 </html>

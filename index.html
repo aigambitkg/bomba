@@ -86,9 +86,9 @@
         </div>
     </nav>
 
-    <div id="hero-scroll-container" class="relative h-[150vh] lg:h-[180vh] z-10">
+    <div id="hero-scroll-container" class="relative z-10">
         
-        <section class="sticky top-0 min-h-[100svh] w-full flex items-center pt-20 sm:pt-24 pb-8 overflow-hidden">
+        <section class="relative min-h-[95svh] w-full flex items-center pt-24 sm:pt-32 pb-8 overflow-hidden">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12">
                 
                 <div class="w-full lg:w-[55%] flex flex-col items-start z-10">
@@ -478,23 +478,24 @@
             });
         }
 
+        /* HIER DIE ÄNDERUNG IM SCRIPT:
+           Statt den Progress innerhalb der 'sticky' Box zu berechnen,
+           prüfen wir jetzt einfach, ob die Seite etwas nach unten gescrollt wurde. */
         function setupHeroScrollAnimation() {
-            const container = document.getElementById('hero-scroll-container');
             const img1 = document.getElementById('hero-img-1');
             const img2 = document.getElementById('hero-img-2');
 
-            if (container && img1 && img2) {
+            if (img1 && img2) {
                 window.addEventListener('scroll', () => {
-                    const rect = container.getBoundingClientRect();
-                    let progress = -rect.top / (rect.height - window.innerHeight);
-                    
-                    if (progress > 0.3) {
+                    // Wenn der User mehr als 100 Pixel gescrollt hat, wird das Bild gewechselt
+                    if (window.scrollY > 100) {
                         img1.classList.remove('opacity-100', 'scale-100');
                         img1.classList.add('opacity-0', 'scale-[1.05]');
                         
                         img2.classList.remove('opacity-0', 'scale-[1.05]');
                         img2.classList.add('opacity-100', 'scale-100');
                     } else {
+                        // Wenn der User wieder ganz oben ist
                         img1.classList.remove('opacity-0', 'scale-[1.05]');
                         img1.classList.add('opacity-100', 'scale-100');
                         
